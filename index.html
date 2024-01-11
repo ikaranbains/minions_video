@@ -36,6 +36,13 @@
       container.style.scale = "1";
       play.style.scale = "0";
       video.play();
+    });
+
+    video.addEventListener("timeupdate", function () {
+      if (video.currentTime >= video.duration - 0.2) {
+        play.style.scale = "1";
+        container.style.scale = "0";
+      }
     })
   </script>
 </body>
